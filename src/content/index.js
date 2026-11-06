@@ -104,6 +104,7 @@ import { init as initImprovedAttributes } from './features/catalog/improvedAttri
 import { init as initOwnedItemPrice } from './features/catalog/ownedItemPrice.js';
 import { init as initItemRender } from './features/catalog/ItemRender.js';
 import { init as initFriendOwnership } from './features/catalog/friendOwnership.js';
+import { init as initCatalogCardAssetId } from './features/catalog/cardAssetId.js';
 
 // Games
 import { init as initBotDetector } from './features/games/about/botDetector.js';
@@ -383,12 +384,13 @@ const featureRoutes = [
             initRoValraAds,
             initRoValraAdBadge,
             initFortyMethodIndicator,
+            initCatalogCardAssetId,
         ],
     },
     // Avatar pages
     {
         paths: ['/looks'],
-        features: [initItemRender],
+        features: [initItemRender, initCatalogCardAssetId],
     },
     // Group pages
     {

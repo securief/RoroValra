@@ -233,6 +233,15 @@ export const SETTINGS_CONFIG = {
                     },
                 },
             },
+            catalogCardAssetIdEnabled: {
+                label: 'Show Asset ID on Catalog Items',
+                description: [
+                    'Adds a read-only input and a copy button directly under each item in the catalog.',
+                    'For animations and emotes, automatically displays the actual Animation ID.',
+                ],
+                type: 'checkbox',
+                default: true,
+            },
             heroUnitsEnabled: {
                 label: 'Marketplace Hero Units',
                 description:

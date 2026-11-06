@@ -1,0 +1,95 @@
+.rovalra-card-asset-id-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 24px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+        border-color: rgba(128, 128, 128, 0.45);
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    &:focus-within {
+        border-color: var(--rovalra-playbutton-color, #00a2ff);
+    }
+}
+
+.dark-theme .rovalra-card-asset-id-wrapper,
+[data-theme='dark'] .rovalra-card-asset-id-wrapper,
+body.dark-theme .rovalra-card-asset-id-wrapper {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+.rovalra-card-asset-id-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100% !important;
+    padding: 0 6px !important;
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: inherit !important;
+    line-height: 22px !important;
+    cursor: text;
+    user-select: all;
+    text-overflow: ellipsis;
+    box-sizing: border-box !important;
+}
+
+.rovalra-card-asset-id-copy {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+    color: inherit;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+
+    &:hover {
+        opacity: 1;
+        background-color: rgba(128, 128, 128, 0.15);
+    }
+
+    &:active {
+        transform: scale(0.92);
+    }
+
+    &.copied {
+        opacity: 1;
+        color: #00b06f !important;
+        background-color: rgba(0, 176, 111, 0.15);
+    }
+
+    svg {
+        display: block;
+        pointer-events: none;
+    }
+}
